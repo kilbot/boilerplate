@@ -1,4 +1,4 @@
-package com.mobile;
+package com.boilerplate;
 
 import android.app.Application;
 
