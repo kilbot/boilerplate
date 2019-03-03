@@ -1,6 +1,5 @@
 .DS_Store
 .jest
-.vscode
 node_modules/
 npm-debug.log
 yarn-error.log

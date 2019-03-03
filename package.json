@@ -11,7 +11,7 @@
       "packages/*"
     ],
     "nohoist": [
-      "**/react-native", 
+      "**/react-native",
       "**/react-native/**"
     ]
   },
@@ -22,7 +22,15 @@
     "clean": "yarn workspaces run clean && yarn cache clean && shx rm -rf yarn.lock && rm -rf node_modules"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.4.2",
+    "@typescript-eslint/parser": "^1.4.2",
+    "eslint": "^5.15.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-native": "^3.6.0",
     "jest": "23.6.0",
+    "prettier": "^1.16.4",
     "shx": "^0.3.2"
   }
 }
