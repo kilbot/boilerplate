@@ -9,14 +9,11 @@
   "workspaces": {
     "packages": [
       "packages/*"
-    ],
-    "nohoist": [
-      "react-native/**"
     ]
   },
   "scripts": {
-    "dev:web": "yarn workspace web start",
-    "dev:desktop": "yarn workspace desktop start",
+    "dev:web": "yarn workspace @boilerplate/web start",
+    "dev:desktop": "yarn workspace @boilerplate/desktop start",
     "clean": "yarn workspaces run clean && yarn cache clean && shx rm -rf yarn.lock && rm -rf node_modules"
   },
   "devDependencies": {
