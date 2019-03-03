@@ -1,0 +1,16 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/kilbot/boilerplate",
+  "author": "kilbot",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {},
+  "devDependencies": {}
+}
