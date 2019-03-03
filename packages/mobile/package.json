@@ -3,28 +3,23 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "start": "react-native start",
     "test": "jest",
     "ios": "react-native run-ios --simulator=\"iPad Air 2\"",
     "android": "react-native run-android",
     "tsc": "tsc",
-    "clean": "shx rm -rf ios/build && rm -rf android/build && rm -rf node_modules && watchman watch-del-all"
+    "clean": "shx rm -rf ios/build && rm -rf android/build && rm -rf node_modules && watchman watch-del-all",
+    "studio": "open -a /Applications/Android\\ Studio.app ./android/",
+    "xcode": "open ios/boilerplate.xcodeproj"
   },
   "dependencies": {
-    "react": "16.6.3",
+    "react": "16.8.3",
     "react-native": "0.58.6"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.9",
     "@types/react": "^16.8.6",
     "@types/react-native": "^0.57.38",
-    "@types/react-test-renderer": "^16.8.1",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "24.1.0",
-    "jest": "24.1.0",
     "metro-react-native-babel-preset": "0.53.0",
-    "react-test-renderer": "16.6.3",
-    "ts-jest": "^24.0.0",
     "typescript": "^3.3.3333"
   },
   "jest": {
