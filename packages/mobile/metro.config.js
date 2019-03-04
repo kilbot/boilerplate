@@ -8,7 +8,11 @@ module.exports = {
 		path.resolve(__dirname, '../common'),
 	],
 	resolver: {
-		blacklistRE: blacklist([/common\/node_modules\/react-native\/.*/]),
+		blacklistRE: blacklist([
+			// prevent react-native conflict in project root or common directory
+			new RegExp(path.resolve(__dirname, '../../node_modules/react-native') + '/.*'),
+			new RegExp(path.resolve(__dirname, '../common/node_modules/react-native') + '/.*'),
+		]),
 		extraNodeModules: {
 			'react-native': path.resolve(__dirname, 'node_modules/react-native'),
 		},
