@@ -11,10 +11,10 @@
       "packages/*"
     ],
     "nohoist": [
-      "**/react-native",
-      "**/react-native/**",
-      "**/react-native-*",
-      "**/react-native-*/**"
+      "@boilerplate/mobile/react-native",
+      "@boilerplate/mobile/react-native/**",
+      "@boilerplate/mobile/react-native-*",
+      "@boilerplate/mobile/react-native-*/**"
     ]
   },
   "scripts": {
