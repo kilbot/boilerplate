@@ -8,7 +8,11 @@
     "clean": "shx rm -rf dist && rm -rf node_modules"
   },
   "dependencies": {
-    "react-native": "^0.58.6"
+    "react-native": "^0.58.6",
+    "react-navigation": "^3.3.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/react-native": "^0.57.38",
+    "@types/react-navigation": "^3.0.4"
+  }
 }
