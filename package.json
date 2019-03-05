@@ -39,5 +39,20 @@
     "jest": "23.6.0",
     "prettier": "^1.16.4",
     "shx": "^0.3.2"
+  },
+  "files": {
+    "package.json": {
+      "content": {
+        "dependencies": {
+        		"@babel/runtime": "7.3.4",
+		        "react": "16.8.3",
+		        "react-app-rewired": "2.1.0",
+		        "react-art": "16.8.3",
+		        "react-dom": "16.8.3",
+		        "react-native-web": "0.10.0",
+		        "react-scripts": "2.1.5"
+        }
+      }
+    }
   }
 }
