@@ -5,5 +5,6 @@ module.exports = {
 	rules: {
 		indent: 'off',
 		'@typescript-eslint/indent': ['error', 'tab'],
+		'@typescript-eslint/explicit-function-return-type': 'off',
 	},
 };

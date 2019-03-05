@@ -1,12 +1,12 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-const SideBar: React.FunctionComponent = () => {
+const Header = () => {
 	return (
 		<View>
-			<Text>Sidebar</Text>
+			<Text>Header</Text>
 		</View>
 	);
 };
 
-export default SideBar;
+export default Header;
