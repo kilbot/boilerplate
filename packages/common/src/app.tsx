@@ -1,4 +1,4 @@
-import { createAppContainer } from 'react-navigation';
+import { createBrowserApp } from '@react-navigation/web';
 import RootNavigator from './navigators/root-stack';
 
-export default createAppContainer(RootNavigator);
+export default createBrowserApp(RootNavigator);

@@ -1,19 +1,18 @@
 import React from 'react';
-import { View, Button } from 'react-native';
+import { View, Text } from 'react-native';
 
 interface Props {
 	navigation: import('react-navigation').NavigationScreenProp<{}, {}>;
 }
 
-const Home = ({ navigation }: Props) => {
-	console.log('home render');
+const Tabs = ({ navigation }: Props) => {
 	return (
 		<View style={{ display: 'flex', flex: 1, alignItems: 'center', justifyContent: 'center' }}>
 			<View style={{ width: '50%' }}>
-				<Button onPress={() => navigation.openDrawer()} title="Open Drawer" />
+				<Text>Tabs</Text>
 			</View>
 		</View>
 	);
 };
 
-export default Home;
+export default Tabs;

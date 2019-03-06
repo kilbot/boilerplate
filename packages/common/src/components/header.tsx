@@ -1,10 +1,28 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Button, AsyncStorage } from 'react-native';
 
-const Header = () => {
+interface Props {
+	navigation: import('react-navigation').NavigationScreenProp<{}, {}>;
+}
+
+const Header = ({ navigation }: Props) => {
 	return (
-		<View>
-			<Text>Header</Text>
+		<View style={{ display: 'flex', flexDirection: 'row', backgroundColor: '#f5f5f5' }}>
+			<View>
+				<Button title="Menu" onPress={() => navigation.openDrawer()} />
+			</View>
+			<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+				<Text style={{ fontSize: 18 }}>Header</Text>
+			</View>
+			<View>
+				<Button
+					title="Logout"
+					onPress={async () => {
+						await AsyncStorage.removeItem('userToken');
+						navigation.navigate('LoadingScreen');
+					}}
+				/>
+			</View>
 		</View>
 	);
 };

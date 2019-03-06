@@ -1,7 +1,12 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-const SideBar = () => {
+// interface Props {
+// 	navigation: import('react-navigation').NavigationScreenProp<{}, {}>;
+// }
+
+const SideBar = (...props: any) => {
+	console.log(props);
 	return (
 		<View>
 			<Text>Sidebar</Text>
