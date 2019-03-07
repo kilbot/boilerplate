@@ -8,14 +8,14 @@
     "clean": "shx rm -rf dist && rm -rf node_modules"
   },
   "dependencies": {
-    "@react-navigation/core": "^3.1.1",
-    "@react-navigation/web": "^1.0.0-alpha.7",
+    "@react-navigation/core": "3.1.1",
+    "@react-navigation/web": "1.0.0-alpha.7",
     "react-native": "0.59.0-rc.3",
-    "react-navigation": "^3.3.2",
-    "react-navigation-drawer": "^1.2.0"
+    "react-navigation": "3.3.2",
+    "react-navigation-drawer": "1.2.0"
   },
   "devDependencies": {
-    "@types/react-native": "^0.57.38",
-    "@types/react-navigation": "^3.0.4"
+    "@types/react-native": "0.57.38",
+    "@types/react-navigation": "3.0.4"
   }
 }

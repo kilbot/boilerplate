@@ -14,12 +14,12 @@
   },
   "dependencies": {
     "react-native": "0.59.0-rc.3",
-    "react-navigation-stack": "^1.0.10"
+    "react-navigation-stack": "1.0.10"
   },
   "devDependencies": {
-    "@types/react-native": "^0.57.38",
+    "@types/react-native": "0.57.38",
     "metro-react-native-babel-preset": "0.53.0",
-    "react-native-gesture-handler": "^1.0.17"
+    "react-native-gesture-handler": "1.0.17"
   },
   "jest": {
     "preset": "react-native",
