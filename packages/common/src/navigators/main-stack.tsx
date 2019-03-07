@@ -1,9 +1,10 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Fragment, useState } from 'react';
 import { createNavigator, SceneView, NavigationActions } from '@react-navigation/core';
 import DrawerRouter from 'react-navigation-drawer/dist/routers/DrawerRouter';
 import { View } from 'react-native';
 import Home from '../screens/home';
 import Page from '../screens/page';
+import Tabs from '../screens/tabs';
 import Header from '../components/header';
 import SideBar from '../components/sidebar';
 
@@ -16,36 +17,23 @@ type DrawerItem = import('react-navigation').DrawerItem;
 const DrawerView: NavigationView = ({ descriptors, navigation }) => {
 	const activeKey = navigation.state.routes[navigation.state.index].key;
 	const descriptor = descriptors[activeKey];
-	const [open, setOpen] = useState(false);
+	// @ts-ignore
+	const { openId, closeId } = navigation.state;
+	const [state, setState] = useState({ open: false, openId, closeId });
 
-	useEffect(() => {
-		// @ts-ignore - TODO why not 'action'?
-		const subscribe = navigation.addListener('action', event => {
-			if (event.action.key !== navigation.state.key) {
-				return;
-			}
-			switch (event.action.type) {
-				case 'Navigation/OPEN_DRAWER':
-					setOpen(true);
-					break;
-				case 'Navigation/CLOSE_DRAWER':
-					setOpen(false);
-					break;
-				default:
-					return;
-			}
-		});
-		return () => {
-			subscribe.remove();
-		};
-	}, [descriptor, navigation]);
+	if (state.openId !== openId) {
+		setState({ open: true, openId: openId, closeId: state.closeId });
+	}
+
+	if (state.closeId !== closeId) {
+		setState({ open: false, closeId: closeId, openId: state.openId });
+	}
 
 	const handleItemPress = ({ route, focused }: DrawerItem) => {
 		if (focused) {
 			navigation.closeDrawer();
 		} else {
 			navigation.dispatch(NavigationActions.navigate({ routeName: route.routeName }));
-			navigation.closeDrawer();
 		}
 	};
 
@@ -57,7 +45,7 @@ const DrawerView: NavigationView = ({ descriptors, navigation }) => {
 				navigation={descriptor.navigation}
 				style={{ flex: 1 }}
 			/>
-			{open && (
+			{state.open && (
 				<View
 					style={{
 						backgroundColor: 'rgba(00, 00, 00, 0.1)',
@@ -98,6 +86,10 @@ const AuthStack = createNavigator(
 			},
 			Page: {
 				screen: Page,
+				// path: 'modal',
+			},
+			Tabs: {
+				screen: Tabs,
 				// path: 'modal',
 			},
 		},

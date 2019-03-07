@@ -8,7 +8,7 @@ type Props = {
 const Tabs = ({ navigation }: Props) => {
 	return (
 		<View style={{ display: 'flex', flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-			<View style={{ width: '50%' }}>
+			<View style={{ width: '50%', alignItems: 'center' }}>
 				<Text style={{ fontSize: 18 }}>Tabs</Text>
 			</View>
 		</View>
