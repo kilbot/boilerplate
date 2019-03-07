@@ -25,7 +25,7 @@ const SideBar = ({ activeItemKey, items, onItemPress, style }: Props) => {
 							onItemPress({ route, focused });
 						}}
 					>
-						<Text>{route.routeName}</Text>
+						<Text style={{ padding: '5px', fontSize: 18 }}>{route.routeName}</Text>
 					</TouchableOpacity>
 				);
 			})}

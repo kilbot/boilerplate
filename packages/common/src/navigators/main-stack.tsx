@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import { createNavigator, SceneView, NavigationActions } from '@react-navigation/core';
 import DrawerRouter from 'react-navigation-drawer/dist/routers/DrawerRouter';
 import { View } from 'react-native';
@@ -10,26 +10,42 @@ import SideBar from '../components/sidebar';
 type NavigationView = import('react-navigation').NavigationView<{}, {}>;
 type DrawerItem = import('react-navigation').DrawerItem;
 
+/**
+ * react-navigation DrawerView is not compatible with web ... yet
+ */
 const DrawerView: NavigationView = ({ descriptors, navigation }) => {
 	const activeKey = navigation.state.routes[navigation.state.index].key;
 	const descriptor = descriptors[activeKey];
-	// @ts-ignore
-	const { openId, closeId } = navigation.state;
-	const [state, setState] = useState({ open: false, openId, closeId });
+	const [open, setOpen] = useState(false);
 
-	if (state.openId !== openId) {
-		setState({ open: true, openId: openId, closeId: state.closeId });
-	}
-
-	if (state.closeId !== closeId) {
-		setState({ open: false, closeId: closeId, openId: state.openId });
-	}
+	useEffect(() => {
+		// @ts-ignore - TODO why not 'action'?
+		const subscribe = navigation.addListener('action', event => {
+			if (event.action.key !== navigation.state.key) {
+				return;
+			}
+			switch (event.action.type) {
+				case 'Navigation/OPEN_DRAWER':
+					setOpen(true);
+					break;
+				case 'Navigation/CLOSE_DRAWER':
+					setOpen(false);
+					break;
+				default:
+					return;
+			}
+		});
+		return () => {
+			subscribe.remove();
+		};
+	}, [descriptor, navigation]);
 
 	const handleItemPress = ({ route, focused }: DrawerItem) => {
 		if (focused) {
 			navigation.closeDrawer();
 		} else {
 			navigation.dispatch(NavigationActions.navigate({ routeName: route.routeName }));
+			navigation.closeDrawer();
 		}
 	};
 
@@ -41,7 +57,7 @@ const DrawerView: NavigationView = ({ descriptors, navigation }) => {
 				navigation={descriptor.navigation}
 				style={{ flex: 1 }}
 			/>
-			{state.open && (
+			{open && (
 				<View
 					style={{
 						backgroundColor: 'rgba(00, 00, 00, 0.1)',

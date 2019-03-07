@@ -9,7 +9,7 @@ const Page = ({ navigation }: Props) => {
 	return (
 		<View style={{ display: 'flex', flex: 1, alignItems: 'center', justifyContent: 'center' }}>
 			<View style={{ width: '50%', alignItems: 'center' }}>
-				<Text>Page</Text>
+				<Text style={{ fontSize: 18 }}>Page</Text>
 			</View>
 		</View>
 	);

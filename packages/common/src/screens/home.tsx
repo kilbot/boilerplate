@@ -9,7 +9,7 @@ const Home = ({ navigation }: Props) => {
 	return (
 		<View style={{ display: 'flex', flex: 1, alignItems: 'center', justifyContent: 'center' }}>
 			<View style={{ width: '50%', alignItems: 'center' }}>
-				<Text>Home</Text>
+				<Text style={{ fontSize: 18 }}>Home</Text>
 			</View>
 		</View>
 	);
