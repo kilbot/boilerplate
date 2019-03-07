@@ -10,11 +10,13 @@ declare module '@react-navigation/core' {
 		SceneView,
 		NavigationActions,
 		StackRouter,
+		TabRouter,
 	} from 'react-navigation';
 }
 
 declare module 'react-navigation-stack';
 declare module 'react-navigation-drawer';
+declare module 'react-navigation-tabs';
 
 declare module 'react-navigation-drawer/dist/routers/DrawerRouter' {
 	import {

@@ -4,7 +4,7 @@ import DrawerRouter from 'react-navigation-drawer/dist/routers/DrawerRouter';
 import { View } from 'react-native';
 import Home from '../screens/home';
 import Page from '../screens/page';
-import Tabs from '../screens/tabs';
+import TabStack from './tab-stack';
 import Header from '../components/header';
 import SideBar from '../components/sidebar';
 
@@ -13,6 +13,8 @@ type DrawerItem = import('react-navigation').DrawerItem;
 
 /**
  * react-navigation DrawerView is not compatible with web ... yet
+ * based on:
+ * https://github.com/react-navigation/react-navigation-drawer/blob/master/src/views/DrawerView.js
  */
 const DrawerView: NavigationView = ({ descriptors, navigation }) => {
 	const activeKey = navigation.state.routes[navigation.state.index].key;
@@ -89,7 +91,7 @@ const AuthStack = createNavigator(
 				// path: 'modal',
 			},
 			Tabs: {
-				screen: Tabs,
+				screen: TabStack,
 				// path: 'modal',
 			},
 		},

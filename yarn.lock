@@ -9511,6 +9511,11 @@ react-native-gesture-handler@1.0.17, react-native-gesture-handler@~1.0.14:
     invariant "^2.2.2"
     prop-types "^15.5.10"
 
+react-native-reanimated@^1.0.0-alpha.12:
+  version "1.0.0-alpha.12"
+  resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-1.0.0-alpha.12.tgz#535c84a9e87c919417aee0fa68f360b3bb9556b0"
+  integrity sha512-jZDPxz8IjpoZ7VAW5X6WJhemmpuLkX6Y9lxKuHJAXls1EwRYkyXIPwvSG34umeqqYSE8Hl3A5TS4pfLORoqm/A==
+
 react-native-safe-area-view@^0.13.0:
   version "0.13.1"
   resolved "https://registry.yarnpkg.com/react-native-safe-area-view/-/react-native-safe-area-view-0.13.1.tgz#834bbb6d22f76a7ff07de56725ee5667ba1386b0"
@@ -9529,6 +9534,11 @@ react-native-tab-view@^1.0.0, react-native-tab-view@^1.2.0:
   integrity sha512-2U+HxDQdjzExoC6gZ+wUhC8v8JjntppsFVU4v4pRvC/1dkN7DJv1k8UEy9+p7ucEaNrcAzu/j5N09Jf4qG36vw==
   dependencies:
     prop-types "^15.6.1"
+
+react-native-tab-view@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-2.0.1.tgz#67ad94be00d751f35367838bb7b089361e58af5d"
+  integrity sha512-kA8CHrcJk7TJA1S55FUL2sN9zjnKzEBg0FpK8MnZnvuuopUQOiLgLauX/rJeQMWg3uBIpGdMajNkRxGwvJkgyA==
 
 react-native-web@0.10.0:
   version "0.10.0"
@@ -9623,6 +9633,15 @@ react-navigation-tabs@1.0.2:
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
     react-native-tab-view "^1.0.0"
+
+react-navigation-tabs@2.0.0-alpha.0:
+  version "2.0.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/react-navigation-tabs/-/react-navigation-tabs-2.0.0-alpha.0.tgz#4efbc1413c693be1493514744b538b3c82ee7136"
+  integrity sha512-ck/FLuPHudW1zG7HaCAy1uLlodLg67BjJQjozC3Ay2b9Rn1yOsD9yYcziq+gC4blocHovpEi9pqqb1vNBYhkDQ==
+  dependencies:
+    hoist-non-react-statics "^2.5.0"
+    react-lifecycles-compat "^3.0.4"
+    react-native-tab-view "^2.0.1"
 
 react-navigation@3.3.2:
   version "3.3.2"
