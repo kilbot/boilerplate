@@ -13,16 +13,19 @@ const AuthView: NavigationView = ({ descriptors, navigation }) => {
 
 const AuthStack = createNavigator(
 	AuthView,
-	StackRouter({
-		Auth: {
-			screen: Auth,
-			// path: '',
+	StackRouter(
+		{
+			Auth: {
+				screen: Auth,
+				// path: '',
+			},
+			Modal: {
+				screen: AuthModal,
+				// path: 'modal',
+			},
 		},
-		Modal: {
-			screen: AuthModal,
-			// path: 'modal',
-		},
-	}),
+		{}
+	),
 	{}
 );
 

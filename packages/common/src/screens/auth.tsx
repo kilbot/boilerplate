@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, Button } from 'react-native';
 
-interface Props {
+type Props = {
 	navigation: import('react-navigation').NavigationScreenProp<{}, {}>;
-}
+};
 
 const Auth = ({ navigation }: Props) => {
 	return (

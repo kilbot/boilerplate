@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { View, Text, ActivityIndicator, StatusBar, AsyncStorage } from 'react-native';
 
-interface Props {
+type Props = {
 	navigation: import('react-navigation').NavigationScreenProp<{}, {}>;
-}
+};
 
 const Loading = ({ navigation }: Props) => {
 	// fetch async data
@@ -16,7 +16,7 @@ const Loading = ({ navigation }: Props) => {
 		return () => {
 			clearTimeout(timer);
 		};
-	}, []);
+	}, [navigation]);
 
 	return (
 		<View style={{ display: 'flex', flex: 1, alignItems: 'center', justifyContent: 'center' }}>

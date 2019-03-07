@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-interface Props {
+type Props = {
 	navigation: import('react-navigation').NavigationScreenProp<{}, {}>;
-}
+};
 
 const Page = ({ navigation }: Props) => {
 	return (
