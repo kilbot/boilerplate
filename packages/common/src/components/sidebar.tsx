@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, ViewStyle } from 'react-native';
 
 /**
  * Based on:
@@ -10,11 +10,12 @@ type Props = {
 	items: import('react-navigation').NavigationRoute[];
 	onItemPress: (drawItem: import('react-navigation').DrawerItem) => void;
 	drawerPosition?: 'left' | 'right';
+	style: ViewStyle;
 };
 
-const SideBar = ({ activeItemKey, items, onItemPress }: Props) => {
+const SideBar = ({ activeItemKey, items, onItemPress, style }: Props) => {
 	return (
-		<View>
+		<View style={style}>
 			{items.map((route, index) => {
 				const focused = activeItemKey === route.key;
 				return (

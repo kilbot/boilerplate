@@ -1,6 +1,7 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import { createNavigator, SceneView, NavigationActions } from '@react-navigation/core';
 import DrawerRouter from 'react-navigation-drawer/dist/routers/DrawerRouter';
+import { View } from 'react-native';
 import Home from '../screens/home';
 import Page from '../screens/page';
 import Header from '../components/header';
@@ -12,6 +13,17 @@ type DrawerItem = import('react-navigation').DrawerItem;
 const DrawerView: NavigationView = ({ descriptors, navigation }) => {
 	const activeKey = navigation.state.routes[navigation.state.index].key;
 	const descriptor = descriptors[activeKey];
+	// @ts-ignore
+	const { openId, closeId } = navigation.state;
+	const [state, setState] = useState({ open: false, openId, closeId });
+
+	if (state.openId !== openId) {
+		setState({ open: true, openId: openId, closeId: state.closeId });
+	}
+
+	if (state.closeId !== closeId) {
+		setState({ open: false, closeId: closeId, openId: state.openId });
+	}
 
 	const handleItemPress = ({ route, focused }: DrawerItem) => {
 		if (focused) {
@@ -29,11 +41,33 @@ const DrawerView: NavigationView = ({ descriptors, navigation }) => {
 				navigation={descriptor.navigation}
 				style={{ flex: 1 }}
 			/>
-			<SideBar
-				activeItemKey={activeKey}
-				items={navigation.state.routes}
-				onItemPress={handleItemPress}
-			/>
+			{state.open && (
+				<View
+					style={{
+						backgroundColor: 'rgba(00, 00, 00, 0.1)',
+						position: 'absolute',
+						top: 0,
+						left: 0,
+						display: 'flex',
+						flexDirection: 'column',
+						zIndex: 1000,
+						height: '100%',
+						width: '100%',
+					}}
+				>
+					<SideBar
+						activeItemKey={activeKey}
+						items={navigation.state.routes}
+						onItemPress={handleItemPress}
+						style={{
+							backgroundColor: '#FFFFFF',
+							width: '300px',
+							height: '100%',
+							flex: 1,
+						}}
+					/>
+				</View>
+			)}
 		</Fragment>
 	);
 };

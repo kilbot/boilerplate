@@ -7,5 +7,5 @@ import './index.css';
 AppRegistry.registerComponent('boilerplate', () => App);
 
 AppRegistry.runApplication('boilerplate', {
-  rootTag: document.getElementById('root'),
+	rootTag: document.getElementById('root'),
 });
