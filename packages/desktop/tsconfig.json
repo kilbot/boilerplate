@@ -4,7 +4,10 @@
     "rootDir": "src",
     "outDir": "dist",
     "noEmit": false,
+    "target": "es2015",
     "module": "commonjs"
   },
-  "include": [ "src" ]
+  "include": [ 
+    "src" 
+  ]
 }
