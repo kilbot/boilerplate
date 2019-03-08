@@ -1221,6 +1221,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "boilerplate-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1244,6 +1245,7 @@
 				PRODUCT_NAME = boilerplate;
 				SWIFT_OBJC_BRIDGING_HEADER = "boilerplate-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
