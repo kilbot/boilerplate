@@ -3,6 +3,7 @@
   "description": "Universal React App playground",
   "version": "1.0.0",
   "main": "dist/index.js",
+  "repository": "https://github.com/kilbot/boilerplate",
   "private": true,
   "author": "kilbot",
   "scripts": {
@@ -10,12 +11,13 @@
     "clean": "shx rm -rf build && rm -rf dist && rm -rf node_modules",
     "compile": "tsc -b",
     "build": "yarn build:base && yarn build:web && yarn build:web:post && yarn build:electron",
-    "build:base": "yarn clean && yarn compile",
+    "build:base": "shx rm -rf build && rm -rf dist && yarn compile",
     "build:electron": "electron-builder",
     "build:skipweb": "yarn build:base && yarn build:web:post && yarn build:electron",
     "build:web": "pushd \"../web\" && yarn build && popd",
     "build:web:post": "shx cp -Rf ../web/dist dist/web"
   },
+  "dependencies": {},
   "devDependencies": {
     "@types/electron-is-dev": "0.3.0",
     "electron": "4.0.7",

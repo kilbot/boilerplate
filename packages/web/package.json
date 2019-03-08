@@ -2,6 +2,7 @@
   "name": "@boilerplate/web",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build && shx rm -rf dist && mv build dist",
