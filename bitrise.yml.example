@@ -1,0 +1,56 @@
+---
+format_version: '4'
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+project_type: react-native
+trigger_map:
+- tag: v*.*.*
+  workflow: deploy
+- pull_request_source_branch: "*"
+  workflow: primary
+workflows:
+  primary:
+    steps:
+    - activate-ssh-key@4.0.3:
+        run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+    - git-clone@4.0.14: {}
+    - script@1.1.5:
+        title: Do anything with Script step
+    - yarn@0.0.8:
+        inputs:
+        - command: install
+    - install-missing-android-tools@2.3.5:
+        inputs:
+        - gradlew_path: "$PROJECT_LOCATION/gradlew"
+    - android-build@0.9.5:
+        inputs:
+        - module: app
+        - variant: release
+        - project_location: "$PROJECT_LOCATION"
+    - certificate-and-profile-installer@1.10.1: {}
+    - xcode-archive@2.4.19:
+        inputs:
+        - project_path: "$BITRISE_PROJECT_PATH"
+        - scheme: "$BITRISE_SCHEME"
+        - export_method: "$BITRISE_EXPORT_METHOD"
+        - configuration: Release
+    - deploy-to-bitrise-io@1.3.19: {}
+app:
+  envs:
+  - opts:
+      is_expand: false
+    PROJECT_LOCATION: packages/mobile/android
+  - opts:
+      is_expand: false
+    MODULE: app
+  - opts:
+      is_expand: false
+    VARIANT: ''
+  - opts:
+      is_expand: false
+    BITRISE_PROJECT_PATH: packages/mobile/ios/boilerplate.xcodeproj
+  - opts:
+      is_expand: false
+    BITRISE_SCHEME: boilerplate
+  - opts:
+      is_expand: false
+    BITRISE_EXPORT_METHOD: app-store
