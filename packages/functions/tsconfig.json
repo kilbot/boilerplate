@@ -1,15 +1,19 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
     "module": "commonjs",
     "noImplicitReturns": true,
     "noUnusedLocals": true,
-    "outDir": "lib",
+    "outDir": "./dist",
     "sourceMap": true,
     "strict": true,
-    "target": "es2015"
+    "target": "es2015",
+    "rootDir": "./src",
+    "baseUrl": "./",
+    "noEmit": false
   },
   "compileOnSave": true,
   "include": [
-    "src"
+    "./src"
   ]
 }

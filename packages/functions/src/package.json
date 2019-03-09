@@ -1,0 +1,9 @@
+{
+  "name": "release",
+  "scripts": {},
+  "dependencies": {
+    "firebase-admin": "^6.2.0",
+    "firebase-functions": "^2.1.0"
+  },
+  "devDependencies": {}
+}
