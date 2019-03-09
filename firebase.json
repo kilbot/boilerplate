@@ -11,7 +11,7 @@
     "predeploy": "npm --prefix \"./packages/functions\" run build"
   },
   "hosting": {
-    "public": "./packages/web/dist",
+    "public": "./packages/web/build",
     "ignore": [
       "firebase.json",
       "**/.*",
