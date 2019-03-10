@@ -10,10 +10,11 @@
     "tsc": "tsc",
     "clean": "shx rm -rf ios/build && rm -rf android/build && rm -rf node_modules && watchman watch-del-all",
     "studio": "open -a /Applications/Android\\ Studio.app ./android/",
-    "xcode": "open ios/boilerplate.xcodeproj"
+    "xcode": "open ios/boilerplate.xcworkspace"
   },
   "dependencies": {
-    "react-native": "0.59.0-rc.3"
+    "react-native": "0.59.0-rc.3",
+    "react-native-firebase": "^5.2.3"
   },
   "devDependencies": {
     "@types/react-native": "0.57.38",

@@ -1,9 +1,9 @@
-import React, { useContext, useEffect } from 'react';
-import { FirebaseContext } from './firebase';
+import React, { useEffect } from 'react';
+import useFirebase from './hooks/use-firebase';
 import { View, Text } from 'react-native';
 
 const Component = () => {
-	const firebase = useContext(FirebaseContext);
+	const firebase = useFirebase();
 	console.log(firebase);
 	useEffect(() => {
 		// const db = firebase.database();
