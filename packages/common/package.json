@@ -10,7 +10,8 @@
   "dependencies": {
     "firebase": "^5.8.6",
     "react-native": "0.59.0-rc.3",
-    "react-native-firebase": "^5.2.3"
+    "react-native-firebase": "^5.2.3",
+    "react-native-google-signin": "^1.2.1"
   },
   "devDependencies": {}
 }

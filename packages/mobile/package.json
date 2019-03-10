@@ -5,16 +5,17 @@
   "scripts": {
     "start": "react-native start",
     "test": "jest",
-    "ios": "react-native run-ios --simulator=\"iPad Air 2\"",
+    "ios": "cd ios && pod install && cd ../ && react-native run-ios --simulator=\"iPad Air 2\"",
     "android": "react-native run-android",
     "tsc": "tsc",
-    "clean": "shx rm -rf ios/build && rm -rf android/build && rm -rf node_modules && watchman watch-del-all",
+    "clean": "shx rm -rf ios/build&& rm -rf ios/Pods && rm -rf android/build && rm -rf node_modules && watchman watch-del-all",
     "studio": "open -a /Applications/Android\\ Studio.app ./android/",
     "xcode": "open ios/boilerplate.xcworkspace"
   },
   "dependencies": {
     "react-native": "0.59.0-rc.3",
-    "react-native-firebase": "^5.2.3"
+    "react-native-firebase": "^5.2.3",
+    "react-native-google-signin": "^1.2.1"
   },
   "devDependencies": {
     "@types/react-native": "0.57.38",
