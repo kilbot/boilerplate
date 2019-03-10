@@ -17,6 +17,7 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* boilerplateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* boilerplateTests.m */; };
+		617032A222350AEE003FE47C /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190FE17222C25B800A31804 /* libRCTAnimation.a */; };
 		6190FE78222C29B400A31804 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190FE1E222C260300A31804 /* libRCTActionSheet.a */; };
 		6190FE79222C29B400A31804 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190FE24222C261200A31804 /* libRCTBlob.a */; };
 		6190FE7A222C29B400A31804 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190FE2B222C262200A31804 /* libRCTGeolocation.a */; };
@@ -383,6 +384,7 @@
 				6190FE81222C29B400A31804 /* libRCTWebSocket.a in Frameworks */,
 				0A4F7B8EE7E43F11E5317FA5 /* libPods-boilerplate.a in Frameworks */,
 				7C00467872EE4DBFAA2219B2 /* libRNFirebase.a in Frameworks */,
+				617032A222350AEE003FE47C /* libRCTAnimation.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1266,7 +1268,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "dev.kilbot.boilerplate";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.kilbot.boilerplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/boilerplate.app/boilerplate";
 			};
@@ -1293,7 +1295,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "dev.kilbot.boilerplate";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.kilbot.boilerplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/boilerplate.app/boilerplate";
 			};
