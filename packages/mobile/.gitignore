@@ -29,6 +29,8 @@ build/
 .gradle
 local.properties
 *.iml
+android/app/release/
+android/app/debug/
 
 # Visual Studio Code
 #
