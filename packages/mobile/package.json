@@ -13,10 +13,10 @@
     "xcode": "open ios/boilerplate.xcodeproj"
   },
   "dependencies": {
-    "react-native": "0.58.6"
+    "react-native": "0.59.0-rc.3"
   },
   "devDependencies": {
-    "@types/react-native": "^0.57.38",
+    "@types/react-native": "0.57.38",
     "metro-react-native-babel-preset": "0.53.0"
   },
   "jest": {
