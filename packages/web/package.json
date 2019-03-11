@@ -23,7 +23,8 @@
     "customize-cra": "0.2.12",
     "react-app-rewired": "2.1.0",
     "react-scripts": "2.1.8",
-    "typescript": "3.3.3333"
+    "typescript": "3.3.3333",
+    "worker-loader": "^2.0.0"
   },
   "eslintConfig": {
     "extends": "react-app"

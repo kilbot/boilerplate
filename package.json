@@ -14,7 +14,9 @@
       "@boilerplate/mobile/react-native",
       "@boilerplate/mobile/react-native/**",
       "@boilerplate/mobile/react-native-*",
-      "@boilerplate/mobile/react-native-*/**"
+      "@boilerplate/mobile/react-native-*/**",
+      "@boilerplate/mobile/@nozbe/watermelondb",
+      "@boilerplate/mobile/@nozbe/watermelondb/**"
     ]
   },
   "scripts": {
@@ -24,6 +26,7 @@
     "clean": "yarn workspaces run clean && yarn cache clean && shx rm -rf yarn.lock && rm -rf node_modules"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.3.0",
     "@typescript-eslint/eslint-plugin": "1.4.2",
     "@typescript-eslint/parser": "1.4.2",
     "babel-eslint": "9.0.0",

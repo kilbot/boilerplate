@@ -13,6 +13,7 @@
     "xcode": "open ios/boilerplate.xcodeproj"
   },
   "dependencies": {
+    "@nozbe/watermelondb": "^0.10.1",
     "react-native": "0.59.0-rc.3"
   },
   "devDependencies": {

@@ -1,49 +1,30 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/emin93/react-native-template-typescript
- *
- * @format
- */
+import { NativeModules } from 'react-native';
 
-import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import { Database } from '@nozbe/watermelondb';
+import SQLiteAdapter from '@nozbe/watermelondb/adapters/sqlite';
+import { createAppContainer } from 'react-navigation';
 
-const instructions = Platform.select({
-	ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-	android: 'Double tap R on your keyboard to reload,\n' + 'Shake or press menu button for dev menu',
+import { mySchema } from './models/schema';
+import Blog from './models/Blog';
+import Post from './models/Post';
+import Comment from './models/Comment';
+
+import { createNavigation } from './components/helpers/Navigation';
+
+const adapter = new SQLiteAdapter({
+	dbName: 'WatermelonDemo',
+	schema: mySchema,
 });
 
-interface Props {}
-export default class App extends Component<Props> {
-	render() {
-		return (
-			<View style={styles.container}>
-				<Text style={styles.welcome}>Welcome to React Native!</Text>
-				<Text style={styles.instructions}>To get started, edit common/src/app.tsx</Text>
-				<Text style={styles.instructions}>{instructions}</Text>
-			</View>
-		);
-	}
-}
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'center',
-		backgroundColor: '#F5FCFF',
-	},
-	welcome: {
-		fontSize: 20,
-		textAlign: 'center',
-		margin: 10,
-	},
-	instructions: {
-		textAlign: 'center',
-		color: '#333333',
-		marginBottom: 5,
-	},
+const database = new Database({
+	adapter,
+	// @ts-ignore
+	modelClasses: [Blog, Post, Comment],
 });
+
+const appStartedLaunchingAt = NativeModules.PerformancePlugin.appInitTimestamp;
+const timeToLaunch = new Date().getTime() - appStartedLaunchingAt;
+
+const Navigation = createNavigation({ database, timeToLaunch });
+
+export default createAppContainer(Navigation);
