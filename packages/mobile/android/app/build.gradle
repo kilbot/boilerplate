@@ -134,13 +134,17 @@ android {
 }
 
 dependencies {
-    implementation project(':react-native-google-signin')
-    implementation project(':react-native-firebase')
+    implementation "com.facebook.react:react-native:+" 
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
-    implementation "com.facebook.react:react-native:+"  // From node_modules
-    implementation "com.google.android.gms:play-services-base:16.0.1"
+
+    implementation project(':react-native-google-signin')
+    implementation project(path: ':react-native-firebase', configuration: 'default')
     implementation "com.google.firebase:firebase-core:16.0.6"
+    implementation "com.google.android.gms:play-services-base:16.0.1"
+
+    // optional firbase sdks
+    implementation "com.google.firebase:firebase-storage:16.0.5"
 }
 
 // Run this once to be able to run the application with BUCK
@@ -149,3 +153,5 @@ task copyDownloadableDepsToLibs(type: Copy) {
     from configurations.compile
     into 'libs'
 }
+
+apply plugin: 'com.google.gms.google-services'

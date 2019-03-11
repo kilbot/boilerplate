@@ -20,7 +20,7 @@ target 'boilerplate' do
   # pod 'Firebase/Invites'
   # pod 'Firebase/Messaging'
   # pod 'Firebase/RemoteConfig'
-  # pod 'Firebase/Storage'
+  pod 'Firebase/Storage', '~> 5.15.0'
   # pod 'Firebase/Performance'
   # pod 'Fabric'
   # pod 'Crashlytics'
