@@ -2,6 +2,7 @@ import React, { useState, Fragment } from 'react';
 import { View, Button, Text } from 'react-native';
 import firebase, { FirebaseContext } from './lib/firebase';
 import AuthService from './services/auth';
+import Cats from './cats';
 
 const auth = new AuthService();
 
@@ -29,7 +30,7 @@ const App = () => {
 			>
 				{user ? (
 					<Fragment>
-						<Text style={{ marginBottom: 20 }}>Storage cat</Text>
+						<Cats />
 						<Button title="Logout" onPress={handleLogout} />
 					</Fragment>
 				) : (
