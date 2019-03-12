@@ -102,8 +102,8 @@ android {
         applicationId 'dev.kilbot.boilerplate'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 3
-        versionName "0.0.3"
+        versionCode 4
+        versionName "0.0.16"
     }
     splits {
         abi {

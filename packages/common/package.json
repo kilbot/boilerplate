@@ -1,6 +1,6 @@
 {
   "name": "@boilerplate/common",
-  "version": "0.0.4",
+  "version": "0.0.16",
   "private": true,
   "license": "MIT",
   "main": "dist",
