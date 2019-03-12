@@ -1,7 +1,7 @@
 {
   "name": "@boilerplate/desktop",
   "description": "Universal React App playground",
-  "version": "0.0.17",
+  "version": "0.0.19",
   "main": "dist/index.js",
   "repository": "https://github.com/kilbot/boilerplate",
   "private": true,

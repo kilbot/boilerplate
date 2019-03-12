@@ -1,6 +1,6 @@
 {
   "name": "@boilerplate/mobile",
-  "version": "0.0.17",
+  "version": "0.0.19",
   "private": true,
   "scripts": {
     "start": "react-native start",
