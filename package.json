@@ -1,6 +1,6 @@
 {
   "name": "boilerplate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "packages/web/src/index.tsx",
   "repository": "https://github.com/kilbot/boilerplate",
   "author": "kilbot",
@@ -21,7 +21,8 @@
     "dev:web": "yarn workspace @boilerplate/web start",
     "dev:desktop": "yarn workspace @boilerplate/desktop start",
     "dev:mobile": "yarn workspace @boilerplate/mobile start",
-    "clean": "yarn workspaces run clean && yarn cache clean && shx rm -rf yarn.lock && rm -rf node_modules"
+    "clean": "yarn workspaces run clean && yarn cache clean && shx rm -rf yarn.lock && rm -rf node_modules",
+    "postversion": "yarn workspaces run version --new-version $new_version"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "1.4.2",
