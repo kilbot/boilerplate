@@ -1,10 +1,11 @@
 {
   "name": "@boilerplate/web",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": true,
+  "homepage": "./",
   "scripts": {
     "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
+    "build": "react-app-rewired build && shx rm -rf dist && mv build dist",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
     "clean": "shx rm -rf dist && rm -rf node_modules"
@@ -13,7 +14,7 @@
     "react": "16.8.4",
     "react-art": "16.8.4",
     "react-dom": "16.8.4",
-    "react-native-web": "0.10.0"
+    "react-native-web": "0.10.1"
   },
   "devDependencies": {
     "@types/jest": "24.0.9",

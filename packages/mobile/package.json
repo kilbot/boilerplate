@@ -10,14 +10,16 @@
     "tsc": "tsc",
     "clean": "shx rm -rf ios/build && rm -rf android/build && rm -rf node_modules && watchman watch-del-all",
     "studio": "open -a /Applications/Android\\ Studio.app ./android/",
-    "xcode": "open ios/boilerplate.xcodeproj"
+    "xcode": "open ios/boilerplate.xcodeproj",
+    "postversion": "react-native-version --never-amend"
   },
   "dependencies": {
     "react-native": "0.59.0-rc.3"
   },
   "devDependencies": {
     "@types/react-native": "0.57.38",
-    "metro-react-native-babel-preset": "0.53.0"
+    "metro-react-native-babel-preset": "0.53.0",
+    "react-native-version": "^2.6.8"
   },
   "jest": {
     "preset": "react-native",
