@@ -13,7 +13,7 @@ All version can be kept in sync by using `yarn version` eg:
 - `yarn version --minor`
 - `yarn version --major`
 
-Bumping the version will not automatically create and commit a git tag, this gives you a chance to review the changes first.
+Bumping the version will not automatically create and commit a git tag, this gives you a chance to review the changes.
 
 ## Credits
 Based on the [React Native Web + Monorepo](https://github.com/brunolemos/react-native-web-monorepo) thanks to @brunolemos. Also thanks to the libraries listed above.
