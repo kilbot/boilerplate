@@ -12,7 +12,7 @@
     "compile": "tsc -b",
     "build": "yarn build:base && yarn build:web && yarn build:web:post && yarn build:electron",
     "build:base": "shx rm -rf build && rm -rf dist && yarn compile",
-    "build:electron": "electron-builder",
+    "build:electron": "electron-builder -mwl",
     "build:skipweb": "yarn build:base && yarn build:web:post && yarn build:electron",
     "build:web": "pushd \"../web\" && yarn build && popd",
     "build:web:post": "shx cp -Rf ../web/dist dist/web"
@@ -25,7 +25,7 @@
     "electron-is-dev": "1.0.1"
   },
   "build": {
-    "appId": "dev.kilbot.electron",
+    "appId": "dev.kilbot.boilerplate",
     "productName": "Boilerplate",
     "extends": null,
     "directories": {

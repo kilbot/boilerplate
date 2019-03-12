@@ -3,9 +3,9 @@ format_version: '4'
 default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 project_type: react-native
 trigger_map:
-- tag: v*.*.*
-  workflow: deploy
 - pull_request_source_branch: "*"
+  workflow: primary
+- tag: v*.*.*
   workflow: primary
 workflows:
   primary:
@@ -33,6 +33,18 @@ workflows:
         - scheme: "$BITRISE_SCHEME"
         - export_method: "$BITRISE_EXPORT_METHOD"
         - configuration: Release
+    - yarn@0.0.8:
+        inputs:
+        - command: yarn workspace @boilerplate/desktop build
+    - github-release@0.10.0:
+        inputs:
+        - body: "$BITRISE_GIT_MESSAGE"
+        - files_to_upload: |-
+            $BITRISE_DEPLOY_DIR/app-release-unsigned.apk
+            $BITRISE_SOURCE_DIR/packages/desktop/dist/Boilerplate-$BITRISE_GIT_TAG.dmg
+            $BITRISE_SOURCE_DIR/packages/desktop/dist/Boilerplate Setup $BITRISE_GIT_TAG.exe
+            $BITRISE_SOURCE_DIR/packages/desktop/dist/Boilerplate $BITRISE_GIT_TAG.AppImage
+        - name: "$BITRISE_GIT_TAG"
     - deploy-to-bitrise-io@1.3.19: {}
 app:
   envs:
