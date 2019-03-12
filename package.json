@@ -1,6 +1,6 @@
 {
   "name": "boilerplate",
-  "version": "0.0.9",
+  "version": "0.0.11",
   "main": "packages/web/src/index.tsx",
   "repository": "https://github.com/kilbot/boilerplate",
   "author": "kilbot",
