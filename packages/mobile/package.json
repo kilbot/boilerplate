@@ -14,7 +14,7 @@
     "postversion": "react-native-version --never-amend"
   },
   "dependencies": {
-    "react-native": "0.59.0-rc.3"
+    "react-native": "0.59.0"
   },
   "devDependencies": {
     "@types/react-native": "0.57.38",
