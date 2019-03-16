@@ -1,30 +1,44 @@
 import React from 'react';
 import { View } from 'react-native';
-
 import { Q } from '@nozbe/watermelondb';
-import withObservables from '@nozbe/with-observables';
-
+import useDatabase from '../hooks/use-database';
+import useObservable from '../hooks/use-observable';
+import useNavigation from '../hooks/use-navigation';
 import ListItem from './helpers/ListItem';
 
-const RawBlogItem = ({ blog, onPress }) => (
-	<ListItem title={blog.name} countObservable={blog.posts.observeCount()} onPress={onPress} />
-);
+const BlogItem = ({ blog, onPress }) => {
+	return (
+		<ListItem title={blog.name} countObservable={blog.posts.observeCount()} onPress={onPress} />
+	);
+};
 
-const BlogItem = withObservables(['blog'], ({ blog }) => ({
-	blog: blog.observe(),
-}))(RawBlogItem);
+const BlogList = ({ search }: { search: string }) => {
+	const navigation = useNavigation();
+	const database = useDatabase();
 
-const BlogList = ({ blogs, navigation }) => (
-	<View>
-		{blogs.map(blog => (
-			<BlogItem blog={blog} key={blog.id} onPress={() => navigation.navigate('Blog', { blog })} />
-		))}
-	</View>
-);
-const enhance = withObservables(['search'], ({ database, search }) => ({
-	blogs: database.collections
-		.get('blogs')
-		.query(Q.where('name', Q.like(`%${Q.sanitizeLikeString(search)}%`))),
-}));
+	const blogs = useObservable(
+		database.collections
+			.get('blogs')
+			.query(Q.where('name', Q.like(`%${Q.sanitizeLikeString(search)}%`)))
+			.observe(),
+		[],
+		[search]
+	);
 
-export default enhance(BlogList);
+	return (
+		<View>
+			{blogs.length > 0 &&
+				blogs.map(blog => (
+					<BlogItem
+						blog={blog}
+						key={blog.id}
+						onPress={() => {
+							navigation.navigate('Blog', { blog });
+						}}
+					/>
+				))}
+		</View>
+	);
+};
+
+export default BlogList;

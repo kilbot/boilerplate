@@ -1,10 +1,9 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import withObservables from '@nozbe/with-observables';
 
 import styles from './helpers/styles';
 
-const RawComment = ({ comment }) => (
+const Comment = ({ comment }) => (
 	<View style={styles.comment}>
 		<Text>
 			{comment.isNasty && '☹️ '}
@@ -13,8 +12,4 @@ const RawComment = ({ comment }) => (
 	</View>
 );
 
-const enhance = withObservables(['comment'], ({ comment }) => ({
-	comment: comment.observe(),
-}));
-
-export default enhance(RawComment);
+export default Comment;

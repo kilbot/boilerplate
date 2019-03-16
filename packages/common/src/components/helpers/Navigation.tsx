@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { createNavigator, StackRouter, SceneView } from '@react-navigation/core';
+import { View } from 'react-native';
+import Button from './Button';
 
 import Root from '../Root';
 import Blog from '../Blog';
@@ -8,40 +10,49 @@ import Post from '../Post';
 
 type NavigationView = import('react-navigation').NavigationView<{}, {}>;
 
-const View: NavigationView = ({ descriptors, navigation }) => {
+const StackView: NavigationView = ({ descriptors, navigation }) => {
 	const activeKey = navigation.state.routes[navigation.state.index].key;
 	const descriptor = descriptors[activeKey];
-	return <SceneView component={descriptor.getComponent()} navigation={descriptor.navigation} />;
+	console.log(descriptor.state.routeName);
+
+	return (
+		<Fragment>
+			{descriptor.state.routeName !== 'Root' && (
+				<View style={{ flexDirection: 'row', marginTop: 20 }}>
+					<Button title="Back" onPress={() => descriptor.navigation.goBack()} />
+				</View>
+			)}
+			<SceneView component={descriptor.getComponent()} navigation={descriptor.navigation} />
+		</Fragment>
+	);
 };
 
 export const createNavigation = props => {
-	const { database, timeToLaunch } = props;
+	const { timeToLaunch } = props;
 	return createNavigator(
-		View,
+		StackView,
 		StackRouter(
 			{
 				Root: {
-					// We have to use a little wrapper because React Navigation doesn't pass simple props (and withObservables needs that)
-					screen: ({ navigation }) => {
-						// const { database, timeToLaunch } = navigation.state.params;
-						return <Root database={database} timeToLaunch={timeToLaunch} navigation={navigation} />;
-					},
+					screen: Root,
+					path: '',
 					navigationOptions: { title: 'Blogs' },
 				},
 				Blog: {
-					screen: ({ navigation }) => (
-						<Blog blog={navigation.state.params.blog} navigation={navigation} />
-					),
+					screen: Blog,
+					path: '',
 					navigationOptions: ({ navigation }) => ({
 						title: navigation.state.params.blog.name,
 					}),
 				},
 				ModerationQueue: {
-					screen: ({ navigation }) => <ModerationQueue blog={navigation.state.params.blog} />,
+					screen: ModerationQueue,
+					path: '',
 					navigationOptions: { title: 'Moderation Queue' },
 				},
 				Post: {
-					screen: ({ navigation }) => <Post post={navigation.state.params.post} />,
+					screen: Post,
+					path: '',
 					navigationOptions: ({ navigation }) => ({
 						title: navigation.state.params.post.title,
 					}),

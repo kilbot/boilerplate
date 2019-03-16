@@ -1,17 +1,17 @@
 import React from 'react';
 import { Text, View, TouchableOpacity, TouchableNativeFeedback, Platform } from 'react-native';
-import withObservables from '@nozbe/with-observables';
+import useObservable from '../../hooks/use-observable';
 
 import styles from './styles';
 
 // We observe and render the counter in a separate component so that we don't have to wait for the database
 // until we can render the component. You can also prefetch all data before displaying the list
-const RawCounter = ({ count }: { count: number }) => count;
-const isAndroid = Platform.OS === 'android';
+const Counter = ({ observable }) => {
+	const count = useObservable(observable, '');
+	return count;
+};
 
-const Counter = withObservables(['observable'], ({ observable }) => ({
-	count: observable,
-}))(RawCounter);
+const isAndroid = Platform.OS === 'android';
 
 type Props = {
 	title: string;
