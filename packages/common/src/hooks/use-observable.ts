@@ -16,13 +16,14 @@ import { useEffect, useMemo, useState } from 'react';
 // 	return state;
 // }
 
-export default function useObservable(observable: any, initial?: any) {
+export default function useObservable(observable: any, initial?: any, inputs: any[] = []) {
 	const [value, setValue] = useState(initial);
 
 	useEffect(() => {
 		const subscription = observable.subscribe(setValue);
 		return () => subscription.unsubscribe();
-	}, [observable]);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [inputs]);
 
 	return value;
 }
