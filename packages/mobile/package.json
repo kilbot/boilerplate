@@ -13,12 +13,13 @@
     "xcode": "open ios/boilerplate.xcodeproj"
   },
   "dependencies": {
-    "@nozbe/watermelondb": "^0.10.1",
-    "react-native": "0.59.0-rc.3"
+    "@nozbe/watermelondb": "0.11.0",
+    "react-native": "0.59.1",
+    "react-native-prompt-android": "^0.3.4"
   },
   "devDependencies": {
-    "@types/react-native": "0.57.38",
-    "metro-react-native-babel-preset": "0.53.0"
+    "@types/react-native": "0.57.40",
+    "metro-react-native-babel-preset": "0.53.1"
   },
   "jest": {
     "preset": "react-native",

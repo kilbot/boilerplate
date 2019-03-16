@@ -22,10 +22,13 @@ export default StyleSheet.create({
 	},
 	marginContainer: { marginVertical: 10 },
 	buttonContainer: { flex: 1, flexDirection: 'row', justifyContent: 'center' },
-	button: Platform.select({ android: { marginHorizontal: 12, marginBottom: 15 } }),
+	button: Platform.select({
+		android: { marginHorizontal: 12, marginBottom: 15 },
+		web: { marginHorizontal: 12, marginBottom: 15 },
+	}),
 	listItem: {
 		backgroundColor: '#f0f0f0',
-		height: Platform.select({ android: 56, ios: 44 }),
+		height: Platform.select({ android: 56, ios: 44, web: 44 }),
 		borderTopWidth: 1,
 		borderBottomWidth: 1,
 		marginTop: -1,

@@ -26,7 +26,7 @@
     "clean": "yarn workspaces run clean && yarn cache clean && shx rm -rf yarn.lock && rm -rf node_modules"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-decorators": "^7.3.0",
+    "@babel/plugin-proposal-decorators": "7.3.0",
     "@typescript-eslint/eslint-plugin": "1.4.2",
     "@typescript-eslint/parser": "1.4.2",
     "babel-eslint": "9.0.0",
@@ -38,10 +38,10 @@
     "eslint-plugin-jsx-a11y": "6.1.2",
     "eslint-plugin-prettier": "3.0.1",
     "eslint-plugin-react": "7.12.4",
-    "eslint-plugin-react-hooks": "1.4.0",
+    "eslint-plugin-react-hooks": "1.5.1",
     "eslint-plugin-react-native": "3.6.0",
     "jest": "23.6.0",
     "prettier": "1.16.4",
-    "shx": "^0.3.2"
+    "shx": "0.3.2"
   }
 }

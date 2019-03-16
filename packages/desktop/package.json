@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@types/electron-is-dev": "0.3.0",
-    "electron": "4.0.6",
+    "electron": "4.1.0",
     "electron-is-dev": "1.0.1"
   }
 }
