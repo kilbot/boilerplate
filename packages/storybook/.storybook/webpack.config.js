@@ -12,7 +12,7 @@ module.exports = async ({ config, mode }) => {
 		test: /\.(ts|tsx)$/,
 		loader: 'babel-loader',
 		options: {
-			// presets: ['module:metro-react-native-babel-preset'],
+			presets: ['module:metro-react-native-babel-preset'],
 		},
 	});
 
@@ -41,7 +41,7 @@ module.exports = async ({ config, mode }) => {
 	// });
 
 	config.resolve.alias = config.resolve.alias || {};
-	// config.resolve.alias['react-native'] = 'react-native-web';
+	config.resolve.alias['react-native'] = 'react-native-web';
 
 	config.resolve.extensions.push('.ts', '.tsx');
 
