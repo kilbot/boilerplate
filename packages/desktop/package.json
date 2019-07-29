@@ -1,16 +1,65 @@
 {
-  "name": "@boilerplate/desktop",
-  "version": "1.0.0",
-  "main": "dist/index.js",
-  "private": true,
-  "scripts": {
-    "start": "yarn compile && electron .",
-    "clean": "shx rm -rf build && rm -rf dist && rm -rf node_modules",
-    "compile": "tsc -b"
-  },
-  "devDependencies": {
-    "@types/electron-is-dev": "0.3.0",
-    "electron": "4.0.6",
-    "electron-is-dev": "1.0.1"
-  }
+	"name": "@boilerplate/desktop",
+	"description": "Universal React App playground",
+	"version": "0.0.1",
+	"main": "dist/index.js",
+	"repository": "https://github.com/kilbot/boilerplate",
+	"private": true,
+	"author": "kilbot",
+	"scripts": {
+		"start": "yarn compile && electron .",
+		"clean": "shx rm -rf build && rm -rf dist && rm -rf node_modules",
+		"compile": "tsc -b",
+		"build": "yarn build:base && yarn build:web && yarn build:web:post && yarn build:electron",
+		"build:base": "shx rm -rf build && rm -rf dist && yarn compile",
+		"build:electron": "electron-builder -mwl",
+		"build:skipweb": "yarn build:base && yarn build:web:post && yarn build:electron",
+		"build:web": "pushd \"../web\" && yarn build && popd",
+		"build:web:post": "shx cp -Rf ../web/dist dist/web"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"@types/electron-is-dev": "1.1.1",
+		"electron": "5.0.8",
+		"electron-builder": "21.1.5",
+		"electron-is-dev": "1.1.0"
+	},
+	"build": {
+		"appId": "dev.kilbot.boilerplate",
+		"productName": "Boilerplate",
+		"extends": null,
+		"directories": {
+			"buildResources": "assets",
+			"output": "build"
+		},
+		"extraMetadata": {
+			"name": "boilerplate"
+		},
+		"linux": {
+			"icon": "icons/icon.png"
+		},
+		"mac": {
+			"category": "public.app-category.developer-tools",
+			"icon": "icons/icon.png"
+		},
+		"win": {
+			"icon": "icons/icon.ico"
+		},
+		"files": [
+			"assets",
+			"dist"
+		],
+		"protocols": [
+			{
+				"name": "Boilerplate",
+				"schemes": [
+					"boilerplate"
+				]
+			}
+		],
+		"publish": {
+			"provider": "github",
+			"releaseType": "release"
+		}
+	}
 }

@@ -1,43 +1,44 @@
 {
-  "name": "@boilerplate/mobile",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "start": "react-native start",
-    "test": "jest",
-    "ios": "react-native run-ios --simulator=\"iPad Air 2\"",
-    "android": "react-native run-android",
-    "tsc": "tsc",
-    "clean": "shx rm -rf ios/build && rm -rf android/build && rm -rf node_modules && watchman watch-del-all",
-    "studio": "open -a /Applications/Android\\ Studio.app ./android/",
-    "xcode": "open ios/boilerplate.xcodeproj"
-  },
-  "dependencies": {
-    "react-native": "0.59.0-rc.3",
-    "react-native-reanimated": "^1.0.0-alpha.12",
-    "react-navigation-stack": "1.0.10"
-  },
-  "devDependencies": {
-    "@types/react-native": "0.57.38",
-    "metro-react-native-babel-preset": "0.53.0",
-    "react-native-gesture-handler": "1.0.17"
-  },
-  "jest": {
-    "preset": "react-native",
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ],
-    "modulePaths": [
-      "<rootDir>"
-    ]
-  }
+	"name": "@boilerplate/mobile",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "react-native start",
+		"test": "jest",
+		"ios": "react-native run-ios --simulator=\"iPad Air 2\"",
+		"android": "react-native run-android",
+		"tsc": "tsc",
+		"clean": "shx rm -rf ios/build && rm -rf android/build && rm -rf node_modules && watchman watch-del-all",
+		"studio": "open -a /Applications/Android\\ Studio.app ./android/",
+		"xcode": "open ios/boilerplate.xcodeproj",
+		"postversion": "react-native-version --never-amend"
+	},
+	"dependencies": {
+		"react-native": "0.60.4",
+		"react-native-reanimated": "^1.1.0",
+		"react-navigation-stack": "1.4.0"
+	},
+	"devDependencies": {
+		"@types/react-native": "0.60.2",
+		"metro-react-native-babel-preset": "0.55.0",
+		"react-native-gesture-handler": "1.3.0"
+	},
+	"jest": {
+		"preset": "react-native",
+		"transform": {
+			"^.+\\.tsx?$": "ts-jest"
+		},
+		"testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+		"moduleFileExtensions": [
+			"ts",
+			"tsx",
+			"js",
+			"jsx",
+			"json",
+			"node"
+		],
+		"modulePaths": [
+			"<rootDir>"
+		]
+	}
 }
