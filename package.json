@@ -28,14 +28,14 @@
 		"postversion": "git push --tags && yarn publish . --tag $npm_package_version && git push && echo \"Successfully released version $npm_package_version!\""
 	},
 	"devDependencies": {
-		"@babel/plugin-proposal-decorators": "7.3.0",
+		"@babel/plugin-proposal-decorators": "7.4.4",
 		"@typescript-eslint/eslint-plugin": "1.13.0",
 		"@typescript-eslint/parser": "1.13.0",
 		"babel-eslint": "10.0.2",
 		"eslint": "6.1.0",
 		"eslint-config-prettier": "6.0.0",
 		"eslint-config-react-app": "4.0.1",
-		"eslint-plugin-flowtype": "3.12.1",
+		"eslint-plugin-flowtype": "3.12.2",
 		"eslint-plugin-import": "2.18.2",
 		"eslint-plugin-jsx-a11y": "6.2.3",
 		"eslint-plugin-prettier": "3.1.0",

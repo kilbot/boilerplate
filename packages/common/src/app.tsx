@@ -18,6 +18,7 @@ export const database = new Database({
 	adapter,
 	// @ts-ignore
 	modelClasses: [Blog, Post, Comment],
+	actionsEnabled: true
 });
 
 export const DatabaseContext = createContext(database);
