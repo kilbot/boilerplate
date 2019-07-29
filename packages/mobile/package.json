@@ -1,42 +1,43 @@
 {
-  "name": "@boilerplate/mobile",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "start": "react-native start",
-    "test": "jest",
-    "ios": "react-native run-ios --simulator=\"iPad Air 2\"",
-    "android": "react-native run-android",
-    "tsc": "tsc",
-    "clean": "shx rm -rf ios/build && rm -rf android/build && rm -rf node_modules && watchman watch-del-all",
-    "studio": "open -a /Applications/Android\\ Studio.app ./android/",
-    "xcode": "open ios/boilerplate.xcodeproj"
-  },
-  "dependencies": {
-    "@nozbe/watermelondb": "0.11.0",
-    "react-native": "0.59.1",
-    "react-native-prompt-android": "^0.3.4"
-  },
-  "devDependencies": {
-    "@types/react-native": "0.57.40",
-    "metro-react-native-babel-preset": "0.53.1"
-  },
-  "jest": {
-    "preset": "react-native",
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ],
-    "modulePaths": [
-      "<rootDir>"
-    ]
-  }
+	"name": "@boilerplate/mobile",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "react-native start",
+		"test": "jest",
+		"ios": "react-native run-ios --simulator=\"iPad Air 2\"",
+		"android": "react-native run-android",
+		"tsc": "tsc",
+		"clean": "shx rm -rf ios/build && rm -rf android/build && rm -rf node_modules && watchman watch-del-all",
+		"studio": "open -a /Applications/Android\\ Studio.app ./android/",
+		"xcode": "open ios/boilerplate.xcodeproj",
+		"postversion": "react-native-version --never-amend"
+	},
+	"dependencies": {
+		"@nozbe/watermelondb": "0.11.0",
+		"react-native": "0.60.4",
+		"react-native-prompt-android": "0.3.4"
+	},
+	"devDependencies": {
+		"@types/react-native": "0.60.2",
+		"metro-react-native-babel-preset": "0.55.0"
+	},
+	"jest": {
+		"preset": "react-native",
+		"transform": {
+			"^.+\\.tsx?$": "ts-jest"
+		},
+		"testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+		"moduleFileExtensions": [
+			"ts",
+			"tsx",
+			"js",
+			"jsx",
+			"json",
+			"node"
+		],
+		"modulePaths": [
+			"<rootDir>"
+		]
+	}
 }
