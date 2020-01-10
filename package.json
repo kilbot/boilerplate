@@ -21,6 +21,10 @@
 		"dev:web": "yarn workspace @boilerplate/web start",
 		"dev:desktop": "yarn workspace @boilerplate/desktop start",
 		"dev:mobile": "yarn workspace @boilerplate/mobile start",
+		"common": "yarn --cwd packages/common",
+		"web": "yarn --cwd packages/web",
+		"desktop": "yarn --cwd packages/desktop",
+		"mobile": "yarn --cwd packages/mobile",
 		"clean": "yarn workspaces run clean && yarn cache clean && shx rm -rf yarn.lock && rm -rf node_modules",
 		"version": "yarn workspaces run version --no-git-tag-version --new-version $npm_package_version && yarn workspace @boilerplate/mobile postversion",
 		"postversion": "git push --tags && yarn publish . --tag $npm_package_version && git push && echo \"Successfully released version $npm_package_version!\""
