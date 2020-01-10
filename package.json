@@ -26,21 +26,23 @@
 		"postversion": "git push --tags && yarn publish . --tag $npm_package_version && git push && echo \"Successfully released version $npm_package_version!\""
 	},
 	"devDependencies": {
-		"@typescript-eslint/eslint-plugin": "1.13.0",
-		"@typescript-eslint/parser": "1.13.0",
-		"babel-eslint": "10.0.2",
-		"eslint": "6.1.0",
-		"eslint-config-prettier": "6.0.0",
-		"eslint-config-react-app": "4.0.1",
-		"eslint-plugin-flowtype": "3.12.2",
-		"eslint-plugin-import": "2.18.2",
+		"@babel/plugin-proposal-class-properties": "^7.7.4",
+		"@babel/plugin-proposal-export-default-from": "^7.7.4",
+		"@typescript-eslint/eslint-plugin": "2.15.0",
+		"@typescript-eslint/parser": "2.15.0",
+		"babel-eslint": "10.0.3",
+		"eslint": "6.8.0",
+		"eslint-config-prettier": "6.9.0",
+		"eslint-config-react-app": "5.1.0",
+		"eslint-plugin-flowtype": "4.5.3",
+		"eslint-plugin-import": "2.19.1",
 		"eslint-plugin-jsx-a11y": "6.2.3",
-		"eslint-plugin-prettier": "3.1.0",
-		"eslint-plugin-react": "7.14.3",
-		"eslint-plugin-react-hooks": "1.6.1",
-		"eslint-plugin-react-native": "3.7.0",
-		"jest": "24.8.0",
-		"prettier": "1.18.2",
-		"shx": "^0.3.2"
+		"eslint-plugin-prettier": "3.1.2",
+		"eslint-plugin-react": "7.17.0",
+		"eslint-plugin-react-hooks": "2.3.0",
+		"eslint-plugin-react-native": "3.8.1",
+		"jest": "24.9.0",
+		"prettier": "1.19.1",
+		"shx": "0.3.2"
 	}
 }

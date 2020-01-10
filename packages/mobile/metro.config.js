@@ -20,4 +20,12 @@ module.exports = {
 		// bundle .ios.tsx, .android.tsx and .native.tsx
 		platforms: ['native'],
 	},
+	transformer: {
+		getTransformOptions: async () => ({
+			transform: {
+				experimentalImportSupport: false,
+				inlineRequires: false,
+			},
+		}),
+	},
 };

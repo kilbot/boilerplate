@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { View, Text, ActivityIndicator, StatusBar, AsyncStorage } from 'react-native';
+import { View, Text, ActivityIndicator, StatusBar } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 
 type Props = {
 	navigation: import('react-navigation').NavigationScreenProp<{}, {}>;
