@@ -6,10 +6,10 @@ type Props = {
 	navigation: import('@react-navigation/stack').StackNavigationProp<ParamListBase>;
 };
 
-export default function HomeScreen({ navigation }: Props) {
+export default function POSScreen({ navigation }: Props) {
 	return (
 		<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-			<Text>Home Screen</Text>
+			<Text>POS Screen</Text>
 		</View>
 	);
 }

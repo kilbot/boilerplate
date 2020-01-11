@@ -6,11 +6,10 @@ type Props = {
 	navigation: import('@react-navigation/stack').StackNavigationProp<ParamListBase>;
 };
 
-export default function SettingsScreen({ navigation }: Props) {
+export default function OrdersScreen({ navigation }: Props) {
 	return (
 		<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-			<Text>Settings Screen</Text>
-			<Button title="Go to Profile" onPress={() => navigation.navigate('Profile')} />
+			<Text>Orders Screen</Text>
 		</View>
 	);
 }
