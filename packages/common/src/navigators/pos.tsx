@@ -9,7 +9,7 @@ import { DataContext } from '../app';
 
 const Drawer = createDrawerNavigator();
 
-export default function App({ navigation }) {
+export default function App({ navigation, route }) {
 	const { setUser } = React.useContext(DataContext);
 
 	navigation.setOptions({

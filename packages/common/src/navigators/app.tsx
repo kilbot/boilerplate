@@ -30,15 +30,15 @@ const AppNavigator = (props: Partial<StackNavigatorProps>): React.ReactElement =
 	}, [setUser]);
 
 	return (
-		<Stack.Navigator>
+		<Stack.Navigator headerMode="none">
 			{user === undefined ? (
-				<Stack.Screen name="Splash" component={SplashScreen} options={{ headerShown: false }} />
+				<Stack.Screen name="Splash" component={SplashScreen} />
 			) : user.authorised ? (
 				<Stack.Screen name="POS" options={{ title: 'POS' }} component={POSNavigator} />
 			) : (
 				<Stack.Screen
 					name="Auth"
-					options={{ title: 'Connect', test: 'foo', headerShown: false }}
+					options={{ title: 'Connect', test: 'foo' }}
 					component={AuthScreen}
 				/>
 			)}
