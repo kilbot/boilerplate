@@ -14,5 +14,6 @@
       "language": "typescriptreact",
       "autoFix": true
     }
-  ]
+  ],
+  "git.ignoreLimitWarning": true
 }

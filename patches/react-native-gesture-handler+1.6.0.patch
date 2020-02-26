@@ -1,0 +1,17 @@
+diff --git a/node_modules/react-native-gesture-handler/Gestures.js b/node_modules/react-native-gesture-handler/Gestures.js
+index 9ac8b02..bc8540d 100644
+--- a/node_modules/react-native-gesture-handler/Gestures.js
++++ b/node_modules/react-native-gesture-handler/Gestures.js
+@@ -219,9 +219,9 @@ function transformPanGestureHandlerProps(props) {
+ }
+ 
+ function managePanProps(props) {
+-  if (__DEV__) {
+-    validatePanGestureHandlerProps(props);
+-  }
++  // if (__DEV__) {
++  //   validatePanGestureHandlerProps(props);
++  // }
+   return transformPanGestureHandlerProps(props);
+ }
+ 

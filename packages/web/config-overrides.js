@@ -14,5 +14,8 @@ module.exports = override(
 		// tell Babel to include common files
 		path.resolve('src'),
 		path.resolve('../common/src'),
+		path.resolve('../../node_modules/react-native-screens'),
+		path.resolve('../../node_modules/react-native-reanimated'),
+		path.resolve('../../node_modules/react-native-gesture-handler'),
 	])
 );

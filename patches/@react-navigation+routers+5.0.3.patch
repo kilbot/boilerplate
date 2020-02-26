@@ -1,0 +1,39 @@
+diff --git a/node_modules/@react-navigation/routers/lib/module/DrawerRouter.js b/node_modules/@react-navigation/routers/lib/module/DrawerRouter.js
+index ccf5e17..9ee1963 100644
+--- a/node_modules/@react-navigation/routers/lib/module/DrawerRouter.js
++++ b/node_modules/@react-navigation/routers/lib/module/DrawerRouter.js
+@@ -136,4 +136,7 @@ export default function DrawerRouter(options) {
+     actionCreators: DrawerActions
+   });
+ }
++export const DrawerActionType = null;
++export const DrawerNavigationState = null;
++export const DrawerRouterOptions = null;
+ //# sourceMappingURL=DrawerRouter.js.map
+\ No newline at end of file
+diff --git a/node_modules/@react-navigation/routers/lib/module/StackRouter.js b/node_modules/@react-navigation/routers/lib/module/StackRouter.js
+index c4c90d0..fd03978 100644
+--- a/node_modules/@react-navigation/routers/lib/module/StackRouter.js
++++ b/node_modules/@react-navigation/routers/lib/module/StackRouter.js
+@@ -275,4 +275,7 @@ export default function StackRouter(options) {
+ 
+   return router;
+ }
++export const StackActionType = null;
++export const StackNavigationState = null;
++export const StackRouterOptions = null;
+ //# sourceMappingURL=StackRouter.js.map
+\ No newline at end of file
+diff --git a/node_modules/@react-navigation/routers/lib/module/TabRouter.js b/node_modules/@react-navigation/routers/lib/module/TabRouter.js
+index ecbc30b..fb7664d 100644
+--- a/node_modules/@react-navigation/routers/lib/module/TabRouter.js
++++ b/node_modules/@react-navigation/routers/lib/module/TabRouter.js
+@@ -237,4 +237,7 @@ export default function TabRouter(_ref) {
+ 
+   return router;
+ }
++export const TabActionType = null;
++export const TabNavigationState = null;
++export const TabRouterOptions = null;
+ //# sourceMappingURL=TabRouter.js.map
+\ No newline at end of file

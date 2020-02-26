@@ -1,13 +1,16 @@
 import React, { createContext } from 'react';
 import { NativeModules } from 'react-native';
 import { Database } from '@nozbe/watermelondb';
+import { NavigationContainer } from '@react-navigation/native';
+import { Navigation } from './components/helpers/Navigation';
 import Adapter from './adapter';
 import { mySchema } from './models/schema';
 import Blog from './models/Blog';
 import Post from './models/Post';
 import Comment from './models/Comment';
-import { createNavigation } from './components/helpers/Navigation';
-import createNavigatorApp from './navigation';
+
+//
+import 'react-native-gesture-handler';
 
 const adapter = new Adapter({
 	dbName: 'WatermelonDemo',
@@ -18,7 +21,7 @@ export const database = new Database({
 	adapter,
 	// @ts-ignore
 	modelClasses: [Blog, Post, Comment],
-	actionsEnabled: true
+	actionsEnabled: true,
 });
 
 export const DatabaseContext = createContext(database);
@@ -27,13 +30,11 @@ export const { Provider, Consumer } = DatabaseContext;
 // const appStartedLaunchingAt = NativeModules.PerformancePlugin.appInitTimestamp;
 // const timeToLaunch = new Date().getTime() - appStartedLaunchingAt;
 
-const Navigation = createNavigation({ database, timeToLaunch: '' });
-
-const RootNavigator = createNavigatorApp(Navigation);
-
 const App = () => (
 	<Provider value={database}>
-		<RootNavigator />
+		<NavigationContainer>
+			<Navigation />
+		</NavigationContainer>
 	</Provider>
 );
 
