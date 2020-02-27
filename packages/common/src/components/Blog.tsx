@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, FlatList } from 'react-native';
 // import { FlatList } from 'react-navigation';
-import useNavigation from '../hooks/use-navigation';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import useObservable from '../hooks/use-observable';
 import Button from './helpers/Button';
 import ListItem from './helpers/ListItem';
@@ -22,7 +22,8 @@ const PostItem = ({ post, onPress }) => (
 
 const Blog = () => {
 	const navigation = useNavigation();
-	const blog = navigation.getParam('blog');
+	const route = useRoute();
+	const blog = route.params.blog;
 	const posts = useObservable(blog.posts.observe(), []);
 
 	const moderate = async () => {

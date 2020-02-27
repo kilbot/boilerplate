@@ -1,8 +1,8 @@
 import React from 'react';
 import { Text, FlatList } from 'react-native';
+import { useRoute } from '@react-navigation/native';
 // import { FlatList } from 'react-navigation';
 import useObservable from '../hooks/use-observable';
-import useNavigation from '../hooks/use-navigation';
 
 import Comment from './Comment';
 import styles from './helpers/styles';
@@ -13,8 +13,8 @@ import { extractId } from '../utils';
 const renderComment = ({ item }) => <Comment comment={item} key={item.id} />;
 
 const Post = () => {
-	const navigation = useNavigation();
-	const post = navigation.getParam('post');
+	const route = useRoute();
+	const post = route.params.post;
 	const comments = useObservable(post.comments.observe(), []);
 
 	const addComment = async () => {

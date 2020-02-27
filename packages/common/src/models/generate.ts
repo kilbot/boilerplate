@@ -55,7 +55,7 @@ const generate = async (
 	const comments = flatMap(post => makeComments(db, post, fuzzCount(commentsPerPost)), posts);
 
 	const allRecords = [...blogs, ...posts, ...comments];
-	await db.batch(...allRecords);
+	await db.action(async () => await db.batch(...allRecords));
 
 	return allRecords.length;
 };

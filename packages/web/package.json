@@ -11,9 +11,9 @@
 		"clean": "shx rm -rf dist && rm -rf node_modules"
 	},
 	"dependencies": {
-		"react": "16.12.0",
-		"react-art": "16.12.0",
-		"react-dom": "16.12.0",
+		"react": "16.13.0",
+		"react-art": "16.13.0",
+		"react-dom": "16.13.0",
 		"react-native-prompt-android": "1.1.0",
 		"react-native-web": "0.12.2"
 	},
