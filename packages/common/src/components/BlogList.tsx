@@ -2,8 +2,10 @@ import React from 'react';
 import { View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Q } from '@nozbe/watermelondb';
+import { useObservableState } from 'observable-hooks';
+
 import useDatabase from '../hooks/use-database';
-import useObservable from '../hooks/use-observable';
+// import useObservable from '../hooks/use-observable';
 import ListItem from './helpers/ListItem';
 
 const BlogItem = ({ blog, onPress }) => {
@@ -16,13 +18,12 @@ const BlogList = ({ search }: { search: string }) => {
 	const navigation = useNavigation();
 	const database = useDatabase();
 
-	const blogs = useObservable(
+	const blogs = useObservableState(
 		database.collections
 			.get('blogs')
 			.query(Q.where('name', Q.like(`%${Q.sanitizeLikeString(search)}%`)))
 			.observe(),
-		[],
-		[search]
+		[]
 	);
 
 	return (
