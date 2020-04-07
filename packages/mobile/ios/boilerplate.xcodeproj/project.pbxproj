@@ -17,16 +17,6 @@
 		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* boilerplateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* boilerplateTests.m */; };
 		2FD95DF524770BF5E32F360E /* libPods-boilerplate-boilerplateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5232D2DD6597D7B8C1164F18 /* libPods-boilerplate-boilerplateTests.a */; };
-		6190FE78222C29B400A31804 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190FE1E222C260300A31804 /* libRCTActionSheet.a */; };
-		6190FE79222C29B400A31804 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190FE24222C261200A31804 /* libRCTBlob.a */; };
-		6190FE7B222C29B400A31804 /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190FE31222C263100A31804 /* libRCTImage.a */; };
-		6190FE7C222C29B400A31804 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190FE39222C264700A31804 /* libRCTLinking.a */; };
-		6190FE7D222C29B400A31804 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190FE41222C265400A31804 /* libRCTNetwork.a */; };
-		6190FE7E222C29B400A31804 /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190FE49222C266B00A31804 /* libRCTSettings.a */; };
-		6190FE7F222C29B400A31804 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190FE51222C267F00A31804 /* libRCTText.a */; };
-		6190FE80222C29B400A31804 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190FE58222C268B00A31804 /* libRCTVibration.a */; };
-		6190FE81222C29B400A31804 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190FE60222C269C00A31804 /* libRCTWebSocket.a */; };
-		6190FE82222C29B400A31804 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190FDF3222C259200A31804 /* libReact.a */; };
 		6190FEB6222C2CEC00A31804 /* Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6190FEB5222C2CEC00A31804 /* Swift.swift */; };
 		7D2760E73942AD374D19EBBD /* libPods-boilerplate-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A5356ABDB0F2CDF6C0B5FF /* libPods-boilerplate-tvOSTests.a */; };
 		CA8D68C949380B2B86ACD5A7 /* libPods-boilerplate-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCDBF3BABCBDAD15721DE0FA /* libPods-boilerplate-tvOS.a */; };
@@ -370,16 +360,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */,
-				6190FE82222C29B400A31804 /* libReact.a in Frameworks */,
-				6190FE79222C29B400A31804 /* libRCTBlob.a in Frameworks */,
-				6190FE78222C29B400A31804 /* libRCTActionSheet.a in Frameworks */,
-				6190FE7B222C29B400A31804 /* libRCTImage.a in Frameworks */,
-				6190FE7C222C29B400A31804 /* libRCTLinking.a in Frameworks */,
-				6190FE7D222C29B400A31804 /* libRCTNetwork.a in Frameworks */,
-				6190FE7E222C29B400A31804 /* libRCTSettings.a in Frameworks */,
-				6190FE7F222C29B400A31804 /* libRCTText.a in Frameworks */,
-				6190FE80222C29B400A31804 /* libRCTVibration.a in Frameworks */,
-				6190FE81222C29B400A31804 /* libRCTWebSocket.a in Frameworks */,
 				FF71982E92911D7EE9CF5E42 /* libPods-boilerplate.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,7 +414,6 @@
 				790E187C4483C793E768CBE1 /* Pods-boilerplate-tvOSTests.debug.xcconfig */,
 				45084EA75109A962F8AD3744 /* Pods-boilerplate-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
