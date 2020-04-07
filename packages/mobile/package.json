@@ -14,17 +14,17 @@
 		"postversion": "react-native-version --never-amend"
 	},
 	"dependencies": {
-		"@nozbe/watermelondb": "0.15.0",
-		"react-native": "0.61.5",
-		"react-native-gesture-handler": "1.6.0",
+		"@nozbe/watermelondb": "0.16.0",
+		"react-native": "0.62.1",
+		"react-native-gesture-handler": "1.6.1",
 		"react-native-prompt-android": "1.1.0",
-		"react-native-reanimated": "1.7.0",
+		"react-native-reanimated": "1.7.1",
 		"react-native-safe-area-context": "0.7.3",
-		"react-native-screens": "2.1.0"
+		"react-native-screens": "2.4.0"
 	},
 	"devDependencies": {
-		"@types/react-native": "0.61.17",
-		"metro-react-native-babel-preset": "0.58.0"
+		"@types/react-native": "0.62.2",
+		"metro-react-native-babel-preset": "0.59.0"
 	},
 	"jest": {
 		"preset": "react-native",

@@ -20,6 +20,7 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* boilerplateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* boilerplateTests.m */; };
+		5CEFB78CBAC91466A2139319 /* libPods-boilerplate-boilerplateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2F2CC461AC0E2C1D670A6E9 /* libPods-boilerplate-boilerplateTests.a */; };
 		6190FE78222C29B400A31804 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190FE1E222C260300A31804 /* libRCTActionSheet.a */; };
 		6190FE79222C29B400A31804 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190FE24222C261200A31804 /* libRCTBlob.a */; };
 		6190FE7B222C29B400A31804 /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190FE31222C263100A31804 /* libRCTImage.a */; };
@@ -31,7 +32,6 @@
 		6190FE81222C29B400A31804 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190FE60222C269C00A31804 /* libRCTWebSocket.a */; };
 		6190FE82222C29B400A31804 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190FDF3222C259200A31804 /* libReact.a */; };
 		6190FEB6222C2CEC00A31804 /* Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6190FEB5222C2CEC00A31804 /* Swift.swift */; };
-		C1D05DEC91225BC408A1DC79 /* libPods-boilerplateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D3C683D011BC88B9F33FA3 /* libPods-boilerplateTests.a */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
 /* End PBXBuildFile section */
@@ -338,8 +338,8 @@
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		454D950FC9023CCC65D86554 /* libPods-boilerplate-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-boilerplate-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5405849CB27745144400AB72 /* libPods-boilerplate-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-boilerplate-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CB3BED2228BB97259C608B1 /* Pods-boilerplate-boilerplateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-boilerplateTests.release.xcconfig"; path = "Target Support Files/Pods-boilerplate-boilerplateTests/Pods-boilerplate-boilerplateTests.release.xcconfig"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
-		60D3C683D011BC88B9F33FA3 /* libPods-boilerplateTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-boilerplateTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6190FEB4222C2CEB00A31804 /* boilerplate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "boilerplate-Bridging-Header.h"; sourceTree = "<group>"; };
 		6190FEB5222C2CEC00A31804 /* Swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift.swift; sourceTree = "<group>"; };
 		61BC762F983B0494B9F47A3B /* Pods-boilerplate-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-tvOS.release.xcconfig"; path = "Target Support Files/Pods-boilerplate-tvOS/Pods-boilerplate-tvOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -349,8 +349,10 @@
 		8388E0BBDE05011F59A00C66 /* Pods-boilerplate-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-boilerplate-tvOS/Pods-boilerplate-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		8D46FA230B5448E88E138761 /* WatermelonDB.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = WatermelonDB.xcodeproj; path = "../node_modules/@nozbe/watermelondb/native/ios/WatermelonDB.xcodeproj"; sourceTree = "<group>"; };
 		A2DC13FCE3491DABEC6E9373 /* Pods-boilerplate-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-boilerplate-tvOSTests/Pods-boilerplate-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		A2F2CC461AC0E2C1D670A6E9 /* libPods-boilerplate-boilerplateTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-boilerplate-boilerplateTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2FD7938AC16C2816683E0A6 /* Pods-boilerplateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplateTests.release.xcconfig"; path = "Target Support Files/Pods-boilerplateTests/Pods-boilerplateTests.release.xcconfig"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		C40AFFF8798FF4DDCA44EA7F /* Pods-boilerplate-boilerplateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-boilerplateTests.debug.xcconfig"; path = "Target Support Files/Pods-boilerplate-boilerplateTests/Pods-boilerplate-boilerplateTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C4D4D5DD0CA944C2B2334C82 /* Pods-boilerplateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplateTests.debug.xcconfig"; path = "Target Support Files/Pods-boilerplateTests/Pods-boilerplateTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C50EC00BE97847F394B59396 /* libWatermelonDB.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = archive.ar; name = libWatermelonDB.a; path = libWatermelonDB.a; sourceTree = "<group>"; };
 		E7F3BD1698FED9F663737CC6 /* Pods-boilerplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate.release.xcconfig"; path = "Target Support Files/Pods-boilerplate/Pods-boilerplate.release.xcconfig"; sourceTree = "<group>"; };
@@ -364,7 +366,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1D05DEC91225BC408A1DC79 /* libPods-boilerplateTests.a in Frameworks */,
+				5CEFB78CBAC91466A2139319 /* libPods-boilerplate-boilerplateTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,7 +451,7 @@
 				F9674F1932C75ECD94CA0A6D /* libPods-boilerplate.a */,
 				454D950FC9023CCC65D86554 /* libPods-boilerplate-tvOS.a */,
 				5405849CB27745144400AB72 /* libPods-boilerplate-tvOSTests.a */,
-				60D3C683D011BC88B9F33FA3 /* libPods-boilerplateTests.a */,
+				A2F2CC461AC0E2C1D670A6E9 /* libPods-boilerplate-boilerplateTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -634,6 +636,8 @@
 				A2DC13FCE3491DABEC6E9373 /* Pods-boilerplate-tvOSTests.release.xcconfig */,
 				C4D4D5DD0CA944C2B2334C82 /* Pods-boilerplateTests.debug.xcconfig */,
 				A2FD7938AC16C2816683E0A6 /* Pods-boilerplateTests.release.xcconfig */,
+				C40AFFF8798FF4DDCA44EA7F /* Pods-boilerplate-boilerplateTests.debug.xcconfig */,
+				5CB3BED2228BB97259C608B1 /* Pods-boilerplate-boilerplateTests.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
@@ -1180,7 +1184,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-boilerplateTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-boilerplate-boilerplateTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1298,7 +1302,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4D4D5DD0CA944C2B2334C82 /* Pods-boilerplateTests.debug.xcconfig */;
+			baseConfigurationReference = C40AFFF8798FF4DDCA44EA7F /* Pods-boilerplate-boilerplateTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1329,7 +1333,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2FD7938AC16C2816683E0A6 /* Pods-boilerplateTests.release.xcconfig */;
+			baseConfigurationReference = 5CB3BED2228BB97259C608B1 /* Pods-boilerplate-boilerplateTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
