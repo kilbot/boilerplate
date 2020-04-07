@@ -19,7 +19,7 @@ const Root = ({ timeToLaunch, ...props }: Props) => {
 	const [isGenerating, setIsGenerating] = useState(false);
 	const database = useDatabase();
 
-	const generateWith = async generator => {
+	const generateWith = async (generator) => {
 		setIsGenerating(true);
 
 		const count = await generator(database);

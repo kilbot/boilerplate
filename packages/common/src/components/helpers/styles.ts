@@ -20,11 +20,11 @@ export default StyleSheet.create({
 		fontSize: 16,
 		fontWeight: '500',
 	},
-	marginContainer: { marginVertical: 10 },
+	marginContainer: { marginVertical: 10, height: 100 },
 	buttonContainer: { flex: 1, flexDirection: 'row', justifyContent: 'center' },
 	button: Platform.select({
-		android: { marginHorizontal: 12, marginBottom: 15 },
-		web: { marginHorizontal: 12, marginBottom: 15 },
+		android: { marginHorizontal: 12, marginBottom: 15, height: 40 },
+		web: { marginHorizontal: 12, marginBottom: 15, height: 40 },
 	}),
 	listItem: {
 		backgroundColor: '#f0f0f0',

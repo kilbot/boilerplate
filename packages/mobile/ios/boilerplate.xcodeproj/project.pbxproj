@@ -21,16 +21,6 @@
 		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* boilerplateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* boilerplateTests.m */; };
 		5CEFB78CBAC91466A2139319 /* libPods-boilerplate-boilerplateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2F2CC461AC0E2C1D670A6E9 /* libPods-boilerplate-boilerplateTests.a */; };
-		6190FE78222C29B400A31804 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190FE1E222C260300A31804 /* libRCTActionSheet.a */; };
-		6190FE79222C29B400A31804 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190FE24222C261200A31804 /* libRCTBlob.a */; };
-		6190FE7B222C29B400A31804 /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190FE31222C263100A31804 /* libRCTImage.a */; };
-		6190FE7C222C29B400A31804 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190FE39222C264700A31804 /* libRCTLinking.a */; };
-		6190FE7D222C29B400A31804 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190FE41222C265400A31804 /* libRCTNetwork.a */; };
-		6190FE7E222C29B400A31804 /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190FE49222C266B00A31804 /* libRCTSettings.a */; };
-		6190FE7F222C29B400A31804 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190FE51222C267F00A31804 /* libRCTText.a */; };
-		6190FE80222C29B400A31804 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190FE58222C268B00A31804 /* libRCTVibration.a */; };
-		6190FE81222C29B400A31804 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190FE60222C269C00A31804 /* libRCTWebSocket.a */; };
-		6190FE82222C29B400A31804 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190FDF3222C259200A31804 /* libReact.a */; };
 		6190FEB6222C2CEC00A31804 /* Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6190FEB5222C2CEC00A31804 /* Swift.swift */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
@@ -50,6 +40,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
 			remoteInfo = "boilerplate-tvOS";
+		};
+		612FEA31243CA21B0028D06B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D46FA230B5448E88E138761 /* WatermelonDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6E660D5E213BCCD300189354;
+			remoteInfo = WatermelonDB;
 		};
 		6190FDF2222C259200A31804 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -347,14 +344,14 @@
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		8388E0BBDE05011F59A00C66 /* Pods-boilerplate-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-boilerplate-tvOS/Pods-boilerplate-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		8D46FA230B5448E88E138761 /* WatermelonDB.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = WatermelonDB.xcodeproj; path = "../node_modules/@nozbe/watermelondb/native/ios/WatermelonDB.xcodeproj"; sourceTree = "<group>"; };
+		8D46FA230B5448E88E138761 /* WatermelonDB.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = WatermelonDB.xcodeproj; path = "../node_modules/@nozbe/watermelondb/native/ios/WatermelonDB.xcodeproj"; sourceTree = "<group>"; };
 		A2DC13FCE3491DABEC6E9373 /* Pods-boilerplate-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-boilerplate-tvOSTests/Pods-boilerplate-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		A2F2CC461AC0E2C1D670A6E9 /* libPods-boilerplate-boilerplateTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-boilerplate-boilerplateTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2FD7938AC16C2816683E0A6 /* Pods-boilerplateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplateTests.release.xcconfig"; path = "Target Support Files/Pods-boilerplateTests/Pods-boilerplateTests.release.xcconfig"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		C40AFFF8798FF4DDCA44EA7F /* Pods-boilerplate-boilerplateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate-boilerplateTests.debug.xcconfig"; path = "Target Support Files/Pods-boilerplate-boilerplateTests/Pods-boilerplate-boilerplateTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C4D4D5DD0CA944C2B2334C82 /* Pods-boilerplateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplateTests.debug.xcconfig"; path = "Target Support Files/Pods-boilerplateTests/Pods-boilerplateTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C50EC00BE97847F394B59396 /* libWatermelonDB.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = archive.ar; name = libWatermelonDB.a; path = libWatermelonDB.a; sourceTree = "<group>"; };
+		C50EC00BE97847F394B59396 /* libWatermelonDB.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libWatermelonDB.a; sourceTree = "<group>"; };
 		E7F3BD1698FED9F663737CC6 /* Pods-boilerplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-boilerplate.release.xcconfig"; path = "Target Support Files/Pods-boilerplate/Pods-boilerplate.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -375,16 +372,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */,
-				6190FE82222C29B400A31804 /* libReact.a in Frameworks */,
-				6190FE79222C29B400A31804 /* libRCTBlob.a in Frameworks */,
-				6190FE78222C29B400A31804 /* libRCTActionSheet.a in Frameworks */,
-				6190FE7B222C29B400A31804 /* libRCTImage.a in Frameworks */,
-				6190FE7C222C29B400A31804 /* libRCTLinking.a in Frameworks */,
-				6190FE7D222C29B400A31804 /* libRCTNetwork.a in Frameworks */,
-				6190FE7E222C29B400A31804 /* libRCTSettings.a in Frameworks */,
-				6190FE7F222C29B400A31804 /* libRCTText.a in Frameworks */,
-				6190FE80222C29B400A31804 /* libRCTVibration.a in Frameworks */,
-				6190FE81222C29B400A31804 /* libRCTWebSocket.a in Frameworks */,
 				10527CE822AE4A97BC664C83 /* libWatermelonDB.a in Frameworks */,
 				2CB0B6EB1CC31AB127D1277E /* libPods-boilerplate.a in Frameworks */,
 			);
@@ -454,6 +441,22 @@
 				A2F2CC461AC0E2C1D670A6E9 /* libPods-boilerplate-boilerplateTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		612FEA2D243CA21A0028D06B /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				C50EC00BE97847F394B59396 /* libWatermelonDB.a */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		612FEA2E243CA21B0028D06B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				612FEA32243CA21B0028D06B /* libWatermelonDB.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		6190FDE0222C259200A31804 /* Products */ = {
@@ -608,6 +611,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				6190FEB4222C2CEB00A31804 /* boilerplate-Bridging-Header.h */,
 				9AC8B9B23AF041BD77D93AF6 /* Pods */,
+				612FEA2D243CA21A0028D06B /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -639,7 +643,6 @@
 				C40AFFF8798FF4DDCA44EA7F /* Pods-boilerplate-boilerplateTests.debug.xcconfig */,
 				5CB3BED2228BB97259C608B1 /* Pods-boilerplate-boilerplateTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -811,6 +814,10 @@
 					ProductGroup = 6190FDE0222C259200A31804 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
+				{
+					ProductGroup = 612FEA2E243CA21B0028D06B /* Products */;
+					ProjectRef = 8D46FA230B5448E88E138761 /* WatermelonDB.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -823,6 +830,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		612FEA32243CA21B0028D06B /* libWatermelonDB.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libWatermelonDB.a;
+			remoteRef = 612FEA31243CA21B0028D06B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		6190FDF3222C259200A31804 /* libReact.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1605,6 +1619,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -1650,6 +1665,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
