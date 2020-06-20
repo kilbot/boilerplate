@@ -8,7 +8,16 @@
     "clean": "shx rm -rf dist && rm -rf node_modules"
   },
   "dependencies": {
-    "react-native": "0.62.2"
+    "leveldown": "^5.6.0",
+    "pouchdb-adapter-http": "^7.2.1",
+    "pouchdb-adapter-idb": "7.2.1",
+    "pouchdb-adapter-leveldb": "^7.2.1",
+    "pouchdb-adapter-react-native-sqlite": "2.0.0",
+    "react-native": "0.62.2",
+    "react-native-sqlite-2": "3.0.1",
+    "rxdb": "9.1.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/pouchdb-adapter-idb": "6.1.3"
+  }
 }
