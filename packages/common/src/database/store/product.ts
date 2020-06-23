@@ -62,18 +62,18 @@ export default {
 	// cross_sell_ids: [],
 	// parent_id: 0,
 	// purchase_note: '',
-	// // categories: [
-	// // 	{
-	// // 		id: '9',
-	// // 		name: 'Clothing',
-	// // 		slug: 'clothing',
-	// // 	},
-	// // 	{
-	// // 		id: '14',
-	// // 		name: 'T-shirts',
-	// // 		slug: 't-shirts',
-	// // 	},
-	// // ],
+	categories: [
+		{
+			id: '9',
+			name: 'Clothing',
+			slug: 'clothing',
+		},
+		{
+			id: '14',
+			name: 'T-shirts',
+			slug: 't-shirts',
+		},
+	],
 	// tags: [],
 	// // images: [
 	// // 	{
