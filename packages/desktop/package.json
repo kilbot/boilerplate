@@ -22,7 +22,7 @@
   "devDependencies": {
     "@types/electron-is-dev": "1.1.1",
     "concurrently": "^5.2.0",
-    "electron": "9.0.4",
+    "electron": "9.0.5",
     "electron-builder": "22.7.0",
     "electron-is-dev": "1.2.0",
     "env-cmd": "^10.1.0",
