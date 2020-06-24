@@ -8,4 +8,5 @@ AppRegistry.registerComponent('boilerplate', () => App);
 
 AppRegistry.runApplication('boilerplate', {
 	rootTag: document.getElementById('root'),
+	initialProps: (window as any).initialProps,
 });
