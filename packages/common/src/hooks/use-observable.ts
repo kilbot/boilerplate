@@ -1,28 +1,15 @@
-import { Subject, Subscription } from 'rxjs';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 
-export default function useObservable(observable: any, initial?: any, inputs: any[] = []) {
+type Observable = import('rxjs').Observable<any>;
+
+export default function useObservable(obs$: Observable, initial?: any, deps: any[] = []) {
 	const [state, setState] = useState(initial);
-	const subject = useMemo(() => new Subject(), inputs);
 
 	useEffect(() => {
-		const subscription = new Subscription();
-		subscription.add(subject);
-		subscription.add(subject.pipe(() => observable).subscribe(value => setState(value)));
+		const subscription = obs$.subscribe(setState);
 		return () => subscription.unsubscribe();
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [subject]);
+	}, deps);
 
 	return state;
 }
-
-// export default function useObservable(observable: any, initial?: any) {
-// 	const [value, setValue] = useState(initial);
-
-// 	useEffect(() => {
-// 		const subscription = observable.subscribe(setValue);
-// 		return () => subscription.unsubscribe();
-// 	}, [observable]);
-
-// 	return value;
-// }
